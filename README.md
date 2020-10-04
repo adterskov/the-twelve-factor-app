@@ -16,6 +16,11 @@ go mod tidy
 go run cmd/app/main.go 
 ```
 
+Запустить приложение, задав переменные окуржения:
+```bash
+PORT=8080 go run cmd/app/main.go
+```
+
 Логгеры:
 - **logrus**
 - zap
