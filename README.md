@@ -21,6 +21,10 @@ go run cmd/app/main.go
 PORT=8080 go run cmd/app/main.go
 ```
 
+Документация по стандартным библиотекам:
+
+https://golang.org/pkg/
+
 Go-линтеры:
 - gocritic
 - golangci-lint

@@ -1,8 +1,11 @@
 package main
 
 import (
-	"github.com/sirupsen/logrus"
+	"net/http"
 	"os"
+
+	"github.com/sirupsen/logrus"
+
 )
 
 func main(){
@@ -12,6 +15,12 @@ func main(){
 	if len(port) == 0 {
 		logrus.Fatal("Port is not defined")
 	}
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	})
+	http.ListenAndServe(":"+port, nil)
+
 }
 
 
